@@ -13,8 +13,8 @@ There are 3 utils in this repo,
 ```
 var config = {} ;
 
-config.org = 'mobileshop';
-config.app = 'sandbox';
+config.org = 'yourOrg';
+config.app = 'yourApp';
 config.uri = "http://api.usergrid.com" ;
 module.exports = config ;
 
@@ -49,7 +49,7 @@ It uses the API Baas APIs to perform these tasks
 3. Store the collection array in a file ```data/collection.json```
 
 4. Upload uses these files as source for data
-5. Uses the API ```POST /org/app/collection```, with the entire array. [usually worked for more then 1000 elements, not sur eof the physical limit]
+5. Uses the API ```POST /org/app/collection```, with the entire array. [usually worked for more then 1000 elements, We could batch it with a size of 1000 - let me know if you think this is the case]
 6. Cleanup again uses the API to delete all entities in a collection
 
 ## TODO:
