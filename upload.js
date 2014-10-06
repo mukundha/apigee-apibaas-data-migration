@@ -17,5 +17,12 @@ fs.readdir( './data' , function (err,files){
 
 function uploadCollection (name, path){
 	var url = base_url + name ;
-	fs.createReadStream('data/' + path ).pipe(request.post(url));
+	fs.createReadStream('data/' + path ).pipe(request.post(url,function(err,res,body){
+
+		if( !err && res.statusCode ==200){
+			console.log('upload complete for ' + name);
+		}else{
+			console.log(body);
+		}
+	}));
 }

@@ -20,11 +20,17 @@ module.exports = config ;
 
 ```
 
+#Give Permissions for the client
+In API Baas, add "/**" permission to the Role "Guest"
+
+
 #Sample
 
 #Download/Backup
 
+
 ```
+npm install request
 node download.js
 ```
 
@@ -39,6 +45,13 @@ node cleanup
 ```
 node upload.js
 ```
+
+#Tip
+While uploading, you may not need the following collections -  roles, notifiers, receipts, notifications
+
+So, if you do not need some collections to be uploaded to the API Baas, simple delete the corresponding 
+files from ```data/{collection}.json```
+
 
 ## How it Works?
 
